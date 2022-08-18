@@ -1,0 +1,121 @@
+.cabecalhoPrincipal .container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav{
+   display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container{
+   display: flex;
+   justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 75%;
+   margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+   display: flex;
+}
+.rodapePrincipal-navMap-list{
+   display: flex;
+   /* flex-direction: column;
+   flex-wrap: wrap; */
+   flex-flow: column wrap;
+   height: 260px;
+}
+
+.conteudoPrincipal-cursos{
+   display: flex;
+   flex-wrap: wrap; /* quebra de linha ou coluna */
+   
+}
+
+.conteudoPrincipal-cursos-link{
+   width: 23%;
+   margin: 1%;
+}
+
+/* tirar as margens do lado esquerdo */
+.conteudoPrincipal-cursos-link:nth-child(4n){
+   margin-right: 0;
+}
+/* tirar as margens do lado direito */
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+   margin-left: 0;
+}
+.videoSobre-sobre{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   flex-grow: 1;
+
+}
+.videoSobre .container{
+   display: flex;
+}
+
+.videoSobre-sobre-list{
+   flex-grow: 1;
+}
+.videoSobre-video{
+   flex-grow: 1; /* divide /aumenta as partes "livres do da pagina" */
+   flex-shrink: 2; /* diminui a classe duas vezes mais que a que estiver junto */
+}
+/* flex 1 2 equivale a flex-grow 1 e flex-shrink 2 */
+
+/* Mobile */
+@media(max-width: 999px){
+.cabecalhoPrincipal-nav{
+   flex-direction: column;
+}
+
+.cabecalhoPrincipal .container{
+   flex-direction: column;
+   align-items: initial;
+   text-align: center;
+}
+.conteudoPrincipal-cursos{
+   flex-direction: column;
+}
+.conteudoPrincipal-cursos-link{
+   width: 100%;
+}
+.rodapePrincipal-navMap-list{
+   height: auto;
+}
+
+.rodapePrincipal-patrocinadores .container{
+   flex-direction: column;
+   align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list{
+   margin: 0;
+   width: 100%;
+}
+
+.rodapePrincipal-contatoForm{
+   width: 100%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+   justify-content: center;
+}
+.cabecalhoPrincipal-nav-link-app{
+   order: -1;
+}
+.videoSobre .container{
+   flex-direction: column;
+}
+.videoSobre-video{
+   margin: auto;
+}
+}
